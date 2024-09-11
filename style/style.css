@@ -1,0 +1,98 @@
+body{
+  margin: 0;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  text-align: center;
+}
+
+p{
+  text-align: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: auto;
+  box-sizing: border-box;
+  border: 1px solid;
+  border-radius: 1rem;
+  background-color: aquamarine;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.form-container{
+  width: 30rem;
+  height: 30rem;
+  border: 1px solid black;
+  border-radius: 5rem;
+  background-color: hsl(240, 71%, 67%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.output-container{
+  width: 30rem;
+  height: 30rem;
+  border: 1px solid black;
+  border-radius: 5rem;
+  background-color: hsl(240, 71%, 67%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input{
+  width: 10rem;
+  height: 2rem;
+  border: 1px solid black;
+  border-radius: .5rem;
+  margin: 1rem;
+}
+.screen{
+  background-color: rgba(255, 255, 255, 0.842);
+  border-radius: 1rem;
+  border: 1px dotted;
+  height: 7rem;
+}
+
+.button-box{
+  background-color: blue;
+  border-radius: 1rem;
+  border: 1px solid;
+  height: 25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+button{
+  text-align: center;
+  background-color: lightcoral;
+  width: 10rem;
+  height: 3rem;
+  padding: 2rem;
+  margin: 0.25rem;
+  border-radius: 1.5rem;
+}
+
+button:hover{
+  background-color: chocolate;
+  opacity: 0.5;
+}

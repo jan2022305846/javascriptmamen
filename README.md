@@ -1,0 +1,1 @@
+A simple web project demonstrating JavaScript input and output functionality using HTML text boxes. This branch showcases how to capture user input from HTML text fields and display the results dynamically on the same page.

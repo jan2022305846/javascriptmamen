@@ -1,2 +1,2 @@
 # javascriptmamen
-Welcome to my JavaScript Practice Repo! This is where I upload my JavaScript exercises and projects as part of my school learning. I'm also using this repository to improve my skills in Git and GitHub. Follow along with my journey as I study JavaScript and version control. Happy coding!
+Welcome to my JavaScript Practice Repository! This repository contains my JavaScript activities and exercises from school. It serves as a practice ground for enhancing my JavaScript skills through various exercises and projects. Feel free to explore and see my progress. Happy coding!

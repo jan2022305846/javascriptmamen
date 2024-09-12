@@ -1,0 +1,23 @@
+#ctrLabel{
+  font-size: 10rem;
+  display: block;
+  text-align: center;
+}
+
+button{
+  text-align: center;
+  padding: 2rem 5rem;
+  background-color: blue;
+  color: antiquewhite;
+  transition: background-color 0.25s;
+  border-radius: 1rem;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+}
+
+button:hover{
+  background-color: rgb(77, 75, 216);
+}

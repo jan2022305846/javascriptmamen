@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .form {
+      background-color: darkcyan;
+      color: hsl(113, 56%, 19%);
+      border: 2px solid black;
+      width: 20rem;
+      height: auto;
+      padding: 5rem 5rem;
+    }
+
+    label {
+      display: block;
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="averageForm" class="form">
+    <h2>Enter Your Grades:</h2>
+    <label for="grade1">Grade (1):</label>
+    <input type="number" id="grade1" placeholder="Enter grade here"><br>
+    <label for="grade2">Grade (2):</label>
+    <input type="number" id="grade2" placeholder="Enter grade here"><br>
+    <label for="grade3">Grade (3):</label>
+    <input type="number" id="grade3" placeholder="Enter grade here"><br>
+    <label for="grade4">Grade (4):</label>
+    <input type="number" id="grade4" placeholder="Enter grade here"><br>
+    <label for="grade5">Grade (5):</label>
+    <input type="number" id="grade5" placeholder="Enter grade here"><br>
+    <button onclick="calculateAverage()">Submit</button>
+    <p id="averageOutput"></p>
+  </div>
+
+  <div id="areaForm" class="form">
+    <h2>Circle Area Calculator</h2>
+    <label for="radius">Radius (cm):</label>
+    <input type="number" id="radius" placeholder="Enter radius"><br>
+    <button onclick="calculateArea()">Submit</button>
+    <p id="areaOutput"></p>
+  </div>
+
+  <div id="squareForm" class="form">
+    <h2>Square of a Number Calculator</h2>
+    <label for="number">Number:</label>
+    <input type="number" id="number" placeholder="Enter number"><br>
+    <button onclick="calculateSquare()">Submit</button>
+    <p id="squareOutput"></p>
+  </div>
+
+  <script>
+    function showMenu() {
+      let choice = window.prompt("Select a calculation: \n1. Calculate Average \n2. Calculate Circle Area \n3. Calculate Square", "1");
+      switch (choice) {
+        case "1":
+          document.getElementById("averageForm").style.display = "block";
+          document.getElementById("areaForm").style.display = "none";
+          document.getElementById("squareForm").style.display = "none";
+          break;
+        case "2":
+          document.getElementById("areaForm").style.display = "block";
+          document.getElementById("averageForm").style.display = "none";
+          document.getElementById("squareForm").style.display = "none";
+          break;
+        case "3":
+          document.getElementById("squareForm").style.display = "block";
+          document.getElementById("averageForm").style.display = "none";
+          document.getElementById("areaForm").style.display = "none";
+          break;
+        default:
+          alert("Invalid choice. Please select a valid option.");
+          showMenu(); // Re-prompt if invalid choice
+      }
+    }
+
+    function calculateAverage() {
+      const g1 = Number(document.getElementById("grade1").value);
+      const g2 = Number(document.getElementById("grade2").value);
+      const g3 = Number(document.getElementById("grade3").value);
+      const g4 = Number(document.getElementById("grade4").value);
+      const g5 = Number(document.getElementById("grade5").value);
+
+      if (isNaN(g1) || isNaN(g2) || isNaN(g3) || isNaN(g4) || isNaN(g5)) {
+        document.getElementById("averageOutput").textContent = "Please enter valid numbers for all grades.";
+        return;
+      }
+
+      const average = (g1 + g2 + g3 + g4 + g5) / 5;
+      document.getElementById("averageOutput").textContent = `Average: ${average}`;
+    }
+
+    function calculateArea() {
+      const radius = Number(document.getElementById("radius").value);
+
+      if (isNaN(radius) || radius <= 0) {
+        document.getElementById("areaOutput").textContent = "Please enter a valid radius.";
+        return;
+      }
+
+      const area = Math.PI * radius * radius;
+      document.getElementById("areaOutput").textContent = `Area: ${area.toFixed(2)} cm²`;
+    }
+
+    function calculateSquare() {
+      const num = Number(document.getElementById("number").value);
+
+      if (isNaN(num)) {
+        document.getElementById("squareOutput").textContent = "Please enter a valid number.";
+        return;
+      }
+
+      const square = num * num;
+      document.getElementById("squareOutput").textContent = `Square of ${num}: ${square}`;
+    }
+
+    window.onload = showMenu;
+  </script>
+</body>
+</html>

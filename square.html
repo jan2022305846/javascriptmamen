@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circle Area Calculator</title>
+  <style>
+    body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mini-form{
+      background-color: darkcyan;
+      color: antiquewhite;
+      border: 2px solid black;
+      width: 20rem;
+      height: 10rem;
+      padding: 5rem 5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Square of Number Calculator</h1>
+  <div class="mini-form">
+    <h3>Enter a Number:</h3>
+    <label for="number">Number:</label>
+    <input type="number" id="number" placeholder="Enter any number..">
+    <input type="button" id="submit" value="Submit">
+    <p id="p1"></p>
+  </div>
+  <script>
+    const submit = document.getElementById("submit");
+    submit.addEventListener("click", 
+      function calculateSquare(){
+        const num = document.getElementById("number").value;
+
+        const square = (num) => {
+          const ans = num * num;
+          return ans;
+        };
+
+        const result = square(num);
+        document.getElementById("p1").textContent = `Square of ${num} = ${result}`;
+      }
+    );
+  </script>
+</body>
+</html>
